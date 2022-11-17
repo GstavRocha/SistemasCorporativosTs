@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="e35729af-d1ed-46b6-aaeb-3ea87ed46974" name="BancoSa@localhost Mapping">
+      <data-sources db="d84aa111-f37f-46e3-a71c-df5614c76375" ddl="68b9de2e-73df-487e-9fb5-41bcaaf71262" />
+      <scope>
+        <node kind="database" negative="1">
+          <node kind="schema" negative="1" />
+        </node>
+      </scope>
+    </mapping>
+  </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="3f518f55-5fe2-4e2f-b9d5-9c76c206bf17" />
+          <option name="name" value="DDL data source" />
+          <option name="languageId" value="PostgreSQL" />
+          <option name="parent" value="d84aa111-f37f-46e3-a71c-df5614c76375" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$" />
+            </array>
+          </option>
+        </State>
+      </list>
+    </option>
+  </component>
+</project>
