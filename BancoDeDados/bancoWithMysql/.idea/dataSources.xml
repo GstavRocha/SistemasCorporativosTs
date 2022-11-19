@@ -4,7 +4,6 @@
     <data-source source="LOCAL" name="banco_db@localhost" uuid="48b79f0a-80a6-4117-9e1c-a723e99ef167">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <configured-by-url>true</configured-by-url>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
