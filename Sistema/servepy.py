@@ -1,7 +1,7 @@
 import mysql.connector
 
 conectar = mysql.connector.connect(
-    user='lucky', password='XXXXXX',
+    user='lucky', password='D@nidani1985',
     host='localhost', database='db_bancoSa',
     auth_plugin='mysql_native_password'
 )
