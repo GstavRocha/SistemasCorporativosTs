@@ -1,6 +1,7 @@
 import React from 'react';
 import './css/App.css';
-import LoginPage from "./loginPage/login-page";
+import './css/login.css';
+import LoginEvents from "./loginPage/login-events";
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
       <p className='esfera2 esferaAnimation1'></p>
       <p className='esfera3 esferaAnimation1'></p>
       <div className='retangulo'>
-        <LoginPage/>
+        <LoginEvents/>
       </div>
   </div>
   );
