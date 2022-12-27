@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="6ef14b27-d285-4baa-9e7f-b30f0cc72719" name="banco_db@localhost Mapping">
+      <data-sources db="48b79f0a-80a6-4117-9e1c-a723e99ef167" ddl="3c33d848-f010-496b-a6a5-5c2bfdef6ac1" />
+    </mapping>
+    <mapping uuid="75698947-3de8-4ad7-a160-fd29eb1e2c52" name="BancoSa Mapping">
+      <data-sources db="868dab3c-fc5d-41cb-afab-210ce878d83d" ddl="4f29ce50-83fc-4fa7-bf68-6e579f22c8f9" />
+      <scope>
+        <node kind="database" negative="1" />
+      </scope>
+    </mapping>
+  </component>
+</project>
