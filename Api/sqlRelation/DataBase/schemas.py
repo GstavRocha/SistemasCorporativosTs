@@ -1,3 +1,4 @@
+from typing import List
 from pydantic import BaseModel
 
 
@@ -14,9 +15,10 @@ class Movimentacao_Schema(BaseModel):
     tipo: str
     valor: float
     data: int
-class Correntista(Correntista_Schema):
+class Correntista(BaseModel):
     id: int
     nome: str
+
 
 class Saldo(Correntista_Schema):
     id: int
@@ -42,5 +44,12 @@ class Deposito(Movimentacao_Schema):
     nome: str
     valor: float
 
+    class Config:
+        orm_mode = True
+class listaUsuario(Correntista):
+    id: int
+    nome: str
+
+    usuarios: list[Correntista_Schema] = []
     class Config:
         orm_mode = True

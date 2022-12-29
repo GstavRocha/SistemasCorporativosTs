@@ -1,2 +1,2 @@
 #access db
-./Api/sqlRelation/access
+/sqlRelation/access.py
