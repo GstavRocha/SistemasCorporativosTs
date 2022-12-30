@@ -1,4 +1,4 @@
-from sqlalchemy import *
+from sqlalchemy import Column, Integer, String, Enum, DDL, event, FLOAT, VARCHAR, TIMESTAMP, ForeignKey
 from sqlalchemy.orm import relationship
 from ..db import Base
 
