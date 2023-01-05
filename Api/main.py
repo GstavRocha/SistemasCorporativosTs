@@ -1,4 +1,5 @@
 from typing import List
+from fastapi.encoders import jsonable_encoder
 from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
 from sqlRelation.db import engine, SessionLocal

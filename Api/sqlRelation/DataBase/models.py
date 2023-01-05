@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Enum, DDL, event, FLOAT, VARCHAR, TIMESTAMP, ForeignKey
+from sqlalchemy import Column, Integer, CHAR,String, Enum, DDL, event, FLOAT, VARCHAR, TIMESTAMP, ForeignKey
 from sqlalchemy.orm import relationship
 from ..db import Base
 
@@ -16,7 +16,7 @@ class Movimentacao(Base):
     __tablename__ = "tb_movimentacao"
     cod_movimentacao = Column(Integer, primary_key=True)
     cod_correntista = Column(Integer, ForeignKey("tb_correntista.cod_correntista"))
-    tipo_transacao = Column(VARCHAR(2))
+    tipo_transacao = Column(CHAR(2))
     valor_movimentacao = Column(FLOAT)
     data_movimentacao = Column(TIMESTAMP)
     chave_fk2 = relationship("Correntista", back_populates="chave_fk1")

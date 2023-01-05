@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="37a0cc19-fa2d-4f3f-b76c-23b5cf76dacc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sqlRelation/DataBase/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sqlRelation/DataBase/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sqlRelation/DataBase/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/sqlRelation/DataBase/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlRelation/Routes/CRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/sqlRelation/Routes/CRUD.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +89,7 @@
       <workItem from="1672368950852" duration="167000" />
       <workItem from="1672369166488" duration="1786000" />
       <workItem from="1672371107473" duration="29000" />
-      <workItem from="1672408397973" duration="5545000" />
+      <workItem from="1672408397973" duration="6740000" />
     </task>
     <servers />
   </component>
