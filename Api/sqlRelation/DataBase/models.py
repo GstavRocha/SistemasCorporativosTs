@@ -16,7 +16,7 @@ class Movimentacao(Base):
     __tablename__ = "tb_movimentacao"
     cod_movimentacao = Column(Integer, primary_key=True)
     cod_correntista = Column(Integer, ForeignKey("tb_correntista.cod_correntista"))
-    tipo_transacao = Column(CHAR(2))
+    tipo_transacao = Column(CHAR)
     valor_movimentacao = Column(FLOAT)
-    data_movimentacao = Column(TIMESTAMP)
+    data_operacao = Column(TIMESTAMP)
     chave_fk2 = relationship("Correntista", back_populates="chave_fk1")

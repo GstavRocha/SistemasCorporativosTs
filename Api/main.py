@@ -26,6 +26,10 @@ def readUsuario(cod: int , db: Session = Depends(get_db)):
     if db_user is None:
         raise HTTPException(status_code=404, detail="usuario não encontrado")
     return  db_user
+@app.get("/movimentacoes/", response_model=list[schemas.getMovimetancao])
+async def getMovimentacoes(s: int=0, l:int = 100, db: Session = Depends(get_db)):
+    movimentacoes = CRUD.getMovimentacao(db, skip=s, limit=l)
+    return movimentacoes
 # serviçoes
 # get movimentacao -- faz o select em todas as movimentacoes
 # post correntista -- crea um usuario especifico

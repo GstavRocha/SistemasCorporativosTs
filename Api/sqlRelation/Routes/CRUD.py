@@ -8,6 +8,8 @@ def getTodos(db: Session, skip: int =0, limit: int = 100):
     return db.query(models.Correntista).offset(skip).limit(limit).all()
 def usuarioNome(db: Session):
     return db.query(models.Correntista).filter(models.Correntista.nome_correntista).all()
+def getMovimentacao(db: Session, skip: int =0 , limit: int =100):
+    return db.query(models.Movimentacao).offset(skip).limit(limit).all()
 
 def create_usuario(db: Session,user: schemas.Correntista_Schema):
     usuario_db = models.Correntista(

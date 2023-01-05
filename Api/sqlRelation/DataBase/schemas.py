@@ -21,10 +21,17 @@ class Movimentacao_Schema(BaseModel):
     cod_correntista: int
     tipo_transacao: str
     valor_movimentacao: float
-    data_movimentacao: datetime
+    data_operacao: datetime
 class Correntista_nome(Correntista_Schema):
     cod_correntista: int
     nome_correntista: str
     class Config:
         orm_mode = True
-        
+class getMovimetancao(Movimentacao_Schema):
+    cod_movimentacao: int
+    cod_correntista: int
+    tipo_transacao: str
+    valor_movimentacao: float
+    class Config:
+        orm_mode= True
+
