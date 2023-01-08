@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, CHAR,String, Enum, DDL, event, FLOAT, VARCHAR, TIMESTAMP, ForeignKey
 from sqlalchemy.orm import relationship
-from ..db import Base
+import pymysql.cursors
+from ..db import Base, conn
 
 
 class Correntista(Base):
@@ -20,3 +21,4 @@ class Movimentacao(Base):
     valor_movimentacao = Column(FLOAT)
     data_operacao = Column(TIMESTAMP)
     chave_fk2 = relationship("Correntista", back_populates="chave_fk1")
+

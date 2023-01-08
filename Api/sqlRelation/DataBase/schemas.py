@@ -1,4 +1,5 @@
 from typing import List, Any
+
 from datetime import datetime
 import peewee
 from pydantic import BaseModel
@@ -16,6 +17,23 @@ class Correntista_Schema(BaseModel): #aqui ele não restorna
     email_correntista: str
     saldo_correntista: float
 
+class getCorrentista(Correntista_Schema):
+    cod_correntista: int
+    class Config:
+        orm_mode = True
+class createUser(Correntista_Schema):
+    cod_correntista: int
+    nome_correntista: str
+    email_correntista: str
+    saldo_correntista: float
+    class Config:
+        orm_mode= True
+
+class putUser(Correntista_Schema):
+    nome_correntista: str
+    email_correntista: str
+    class Config:
+        orm_mode= True
 class Movimentacao_Schema(BaseModel):
     cod_movimentacao: int
     cod_correntista: int
@@ -27,11 +45,14 @@ class Correntista_nome(Correntista_Schema):
     nome_correntista: str
     class Config:
         orm_mode = True
-class getMovimetancao(Movimentacao_Schema):
+class getMovimetancoes(Movimentacao_Schema):
     cod_movimentacao: int
     cod_correntista: int
     tipo_transacao: str
     valor_movimentacao: float
     class Config:
         orm_mode= True
-
+class getMovimentacao(Movimentacao_Schema):
+    cod_movimentacao: int
+    class Config:
+        orm_mode=True
