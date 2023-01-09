@@ -1,7 +1,0 @@
-{
-  "name": "banco-web",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/banco-web/src",
-  "projectType": "application",
-  "tags": []
-}

@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37a0cc19-fa2d-4f3f-b76c-23b5cf76dacc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlRelation/DataBase/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sqlRelation/DataBase/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlRelation/DataBase/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/sqlRelation/DataBase/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlRelation/Routes/CRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/sqlRelation/Routes/CRUD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../banco-web/apps/banco-web/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../banco-web/apps/banco-web/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../banco-web/apps/banco-web/src/loginPage/login-events.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../banco-web/apps/banco-web/src/loginPage/login-events.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +101,8 @@
       <workItem from="1672944809071" duration="5517000" />
       <workItem from="1673087300888" duration="4112000" />
       <workItem from="1673103686616" duration="7852000" />
-      <workItem from="1673144774429" duration="8048000" />
+      <workItem from="1673144774429" duration="8298000" />
+      <workItem from="1673251762123" duration="4000" />
     </task>
     <servers />
   </component>
