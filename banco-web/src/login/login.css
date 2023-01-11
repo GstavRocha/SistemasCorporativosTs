@@ -1,0 +1,89 @@
+.loginPage{
+    position: relative;
+    width: 100%;
+    height: 1024px;
+    background: linear-gradient(134.94deg, #382293 0.66%, #581677 74.98%);
+}
+.esfera1{
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    left: 30%;
+    top: 72px;
+    background: linear-gradient(90deg, #29B7DF 0%, #49269D 100%);
+    /*background: radial-gradient(at top left);*/
+    -moz-border-radius: 150px;
+    -webkit-border-radius: 150px;
+    border-radius: 150px;
+
+}
+.esfera2{
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: 10%;
+    top: 600px;
+    background: linear-gradient(180deg, #B20AA8 0%, #6F1FAB 100%);
+    -moz-border-radius: 150px;
+    -webkit-border-radius: 150px;
+    border-radius: 150px;
+
+}
+.esfera3{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 40%;
+    top: 603px;
+    background: linear-gradient(180deg, #B20AA8 0%, #6F1FAB 100%);
+    -moz-border-radius: 150px;
+    -webkit-border-radius: 150px;
+    border-radius: 150px;
+}
+.retangulo{
+    position: absolute;
+    width: 50%;
+    height: 1024px;
+    left: 50%;
+    top: 0px;
+
+    background: #FFFFFF;
+}
+.esferaAnimation1{
+  -webkit-animation: esfera1 3s linear infinite;
+}
+@-webkit-keyframes esfera1 {
+  0%{-webkit-transform: rotate(0deg)}
+  100% {-webkit-transform: rotate(360deg)}
+}
+@keyframes esfera1 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.signIn{
+    position: absolute;
+    width: 580px;
+    height: 145px;
+    left: 15%;
+    top: 287px;
+    font-family: 'Roboto', fantasy;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+.text{
+    position: absolute;
+    width: 611px;
+    height: 61px;
+    left: 20%;
+    top: 450px;
+    border-top-color: #FFFFFF;
+    border-bottom-style: double;
+    border-bottom-color: #581677;
+}
