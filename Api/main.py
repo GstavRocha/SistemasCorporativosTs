@@ -1,52 +1,44 @@
-from typing import List
-from sqlalchemy import select
-from fastapi import Depends, FastAPI, HTTPException
+
+from fastapi import Depends, FastAPI, HTTPException, requests, APIRouter
+from fastapi.encoders import jsonable_encoder
 from sqlalchemy.orm import Session
-from sqlRelation.db import engine, SessionLocal, conn
-from sqlRelation.DataBase import models, schemas
-from sqlRelation.Routes import CRUD
+from .sqlRelation.db import engine, SessionLocal, conn,get_db,conx, cursor
+from .sqlRelation.DataBase import models, schemas
+from .sqlRelation.Routes import CRUD
 models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+appRouter = APIRouter
+
+database = models.Correntista()
 @app.get("/")
 async def serveLoad():
         return {"Servidor": "Online"}
+@app.get("/usuario/{cod}")
+def verifica_usuario(cod: int , db: Session = Depends(get_db)):
+    db_user = CRUD.verficaUsuario(db, cod=cod )
+    if db_user is None:
+        raise HTTPException(status_code=404, detail="usuario não encontrado")
+    else:
+        db_user = HTTPException(status_code=200, detail="usuario encontrado", headers=db_user)
+        return db_user
 @app.post("/usuario/", response_model= schemas.createUser)
 def creat_user(user: schemas.createUser, db: Session= Depends(get_db)):
     db_usuario = CRUD.create_usuario(db, user=user)
     if db_usuario:
         raise HTTPException(status_code=400, detail=" Usuario já foi criado")
     return CRUD.create_usuario(db=db, user=user)
-# ta retornando cod 400 tenho que consertar
 
-# @app.get("/teste/", response_model= schemas.putUser)
-# def putUser(cod: int, db: Session = Depends(get_db)):
-#     db_usuario = CRUD.updateUser(db = db, cod=cod)
-#     return  db_usuario
 @app.get("/usuarios/", response_model=list[schemas.Correntista_nome])
 async def getUsuarios(s: int = 0, l: int = 100, db: Session = Depends(get_db)):
     usuarios = CRUD.getTodos(db, skip=s, limit=l)
     return usuarios
-@app.get("/usuario/")
-def readUsuario(cod: int , db: Session = Depends(get_db)):
-    db_user = CRUD.get_usuario(db, cod=cod )
-    if db_user is None:
-        raise HTTPException(status_code=404, detail="usuario não encontrado")
-    return  db_user
-@app.get("/testeGet/{cod}") ## o schema não é obrigatório
-async def getTestadooo(cod: int,db: Session = Depends(get_db)):
-    db_user = CRUD.getTeste(db=db, cod=cod)
-    return db_user.fetchall()
 
-@app.put("/updatecorrentista/{cod}", response_model=schemas.putUser) #sem o schema ele retorna 200, mas com o schema ele da erro
-async def alterar_usuario(cod: int, user: schemas.putUser, db: Session=Depends(get_db)):
-    db_user = CRUD.put_user(db=db,user=user,cod=cod)
-    return db_user
+@app.put("/updatecorrentista/{cod}", response_model=schemas.correntistaResponse)
+async def alterar_usuario(cod: int, db: Session=Depends(get_db)):
+    if not CRUD.verficaUsuario(cod=cod,database=db):
+        raise HTTPException(status_code=404, detail="usuário não encontrado")
+    user = CRUD.update_usuario(db,cod=cod)
+    return user
 
 
 @app.get("/movimentacoes/", response_model=list[schemas.getMovimetancoes])
@@ -60,9 +52,44 @@ async def get_movimentacao(cod: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Movimentacao não encontrada")
     print(db_moving)
     return db_moving
-
-# serviçoes
-
+@app.get("/usuarios/")
+def callConnector():
+    select = "SELECT * FROM tb_correntista"
+    cursor.execute(select)
+    result = cursor.fetchall()
+    return result
+@app.get("/movimentacoes/view")
+def vw_moving():
+    select = f"select * from vw_extratoCorrentista"
+    cursor.execute(select)
+    result = cursor.fetchall()
+    return result
+@app.get("/movimentacao/usuario{cod}")
+def vw_moving_correntista(cod: int):
+    select_vw = f'select * from vw_movimentacao where nome_correntista = {cod}'
+    cursor.execute(select_vw)
+    result = cursor.fetchone()
+    return result
+@app.put("/usuario/update/valor{cod}")
+def up_usuario(cod: int, valor: int):
+    update = f'update tb_correntista set saldo_correntista = {valor} where cod_correntista = {cod}'
+    cursor.execute(update)
+    conx.commit()
+@app.put("/usuario/update/nome{nome}")
+def up_usuario(cod: int, nome: str):
+    update = f'update tb_correntista set nome_correntista = "{nome}" where cod_correntista = {cod}'
+    cursor.execute(update)
+    conx.commit()
+@app.put("/usuario/update/email{email}")
+def up_usuario(cod: int, email: str):
+    update = f'update tb_correntista set email_correntista = "{email}" where cod_correntista = {cod}'
+    cursor.execute(update)
+    conx.commit()
+@app.delete("/usuario/delete/usuario")
+def del_usuario(cod: int):
+    delete = f'delete from tb_correntista where cod_correntista = {cod}'
+    cursor.execute(delete)
+    conx.commit()
 # post deposito -- usa  a procedure de deposito EXEC
 # post saque -- usa  a procedure de saque EXEC
 #post pagamento -- usa a procedure de pagamento EXEC

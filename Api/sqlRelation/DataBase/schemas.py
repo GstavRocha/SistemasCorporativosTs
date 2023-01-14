@@ -28,10 +28,14 @@ class createUser(Correntista_Schema):
     saldo_correntista: float
     class Config:
         orm_mode= True
-
-class putUser(Correntista_Schema):
+class getNome(Correntista_Schema):
     nome_correntista: str
-    email_correntista: str
+    class Config:
+        orm_mode=True
+class correntistaRequest(Correntista_Schema):
+    pass
+class correntistaResponse(Correntista_Schema):
+    cod_correntista: int
     class Config:
         orm_mode= True
 class Movimentacao_Schema(BaseModel):
