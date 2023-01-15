@@ -41,9 +41,9 @@ class correntistaResponse(Correntista_Schema):
 class Movimentacao_Schema(BaseModel):
     cod_movimentacao: int
     cod_correntista: int
-    tipo_transacao: str
+    tipo_movimentacao: str
     valor_movimentacao: float
-    data_operacao: datetime
+    data_movimentacao: datetime
 class Correntista_nome(Correntista_Schema):
     cod_correntista: int
     nome_correntista: str
@@ -52,7 +52,7 @@ class Correntista_nome(Correntista_Schema):
 class getMovimetancoes(Movimentacao_Schema):
     cod_movimentacao: int
     cod_correntista: int
-    tipo_transacao: str
+    tipo_movimentacao: str
     valor_movimentacao: float
     class Config:
         orm_mode= True
