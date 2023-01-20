@@ -1,7 +1,7 @@
 import React from 'react';
-import Login from "./login/login";
 import './App.css';
 import './login/login.css';
+import Login from "./login/login";
 
 
 
@@ -14,7 +14,7 @@ function App() {
       <p className='esfera2 esferaAnimation1'></p>
       <p className='esfera3 esferaAnimation1'></p>
       <div className='retangulo'>
-         <p className="teste"><Login/></p>
+         <div className="teste"><Login/></div>
       </div>
   </div>
   );

@@ -77,13 +77,21 @@
 
     color: #000000;
 }
+
 .text{
     position: absolute;
-    width: 611px;
-    height: 61px;
+    width: 450px;
+    height: 55px;
     left: 20%;
     top: 450px;
     border-top-color: #FFFFFF;
     border-bottom-style: double;
     border-bottom-color: #581677;
+}
+.Botao{
+    position: relative;
+    width: 150px;
+    height: 61px;
+    left: 70%;
+    top: 450px;
 }

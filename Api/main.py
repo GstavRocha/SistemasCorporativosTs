@@ -74,13 +74,7 @@ def vw_moving():
     select = f"select * from vw_extratoCorrentista;"
     cursor.execute(select)
     result = cursor.fetchall()
-    return HTTPException(status_code=200, detail="Sucess", headers=result)
-
-
-@app.get("/movimentacoes/", response_model=list[schemas.getMovimetancoes])
-async def getMovimentacoes(s: int=0, l:int = 100, db: Session = Depends(get_db)):
-    movimentacoes = CRUD.getMovimentacoes(db, skip=s, limit=l)
-    return movimentacoes
+    return HTTPException(status_code=200, detail="SUCESS", headers=result)
 @app.get("/movimentacao/correntista/{cod}")
 def moving_correntista(cod: int):
     vw_correntista_moving = f"select * from vw_extratoCorrentista where cod_correntista = {cod}"
