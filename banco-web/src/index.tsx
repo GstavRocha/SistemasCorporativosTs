@@ -5,9 +5,12 @@ import reportWebVitals from './reportWebVitals';
 import App from "./App";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Login from "./login/login";
+import Banco from "./IndexBanco/banco";
 
 const router = createBrowserRouter([
-    {path: "/", element:<App/>},{path: "/", element:<Login/>}
+    {path: "/", element:<App/>},
+    {path: "/", element:<Login/>},
+    {path: "/banco", element:<Banco/>},
 ])
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

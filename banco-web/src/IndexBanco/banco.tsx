@@ -1,18 +1,41 @@
 import React from "react";
-import Login from "../login/login";
+import Usuario from "./usuario";
+import {Link} from "react-router-dom";
+import "./banco.css"
+
 
 const Banco = ()=>{
     return(
         <div className='loginPage'>
-            <p className='esfera1 esferaAnimation1'></p>
-            <h1> Welcome to Test Bank</h1>
-            <p className='aquiestamos'>Aqui estamos criando e inovando</p>P
-            <p className='esfera2 esferaAnimation1'></p>
-            <p className='esfera3 esferaAnimation1'></p>
+            <p>Aqui entra os dados</p>
+            <table className="bancouser">
+                <thead>
+                <tr>
+                    <th>Nome do Usuario</th>
+                    <th>Operação</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Fulano</td>
+                    <td>
+                        <input type="button" value="Deposito"/>
+                        <input type="button" value="Pagamento"/>
+                        <input type="button" value="Transferência"/>
+                    </td>
+                </tr>
+
+                </tbody>
+
+            </table>
             <div className='retangulo'>
-                <div className="teste"><Login/></div>
+                <div className="teste"><Usuario/></div>
+                <Link to={"/"}>
+                    <input type="button" value='voltar'/>
+                </Link>
             </div>
         </div>
+
     );
 }
 export default Banco;
