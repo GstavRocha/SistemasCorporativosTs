@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../../New Folder/loginPage/login-events.css';
+import '.New Folder/loginPage/login-events.css';
 
 
 

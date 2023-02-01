@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37a0cc19-fa2d-4f3f-b76c-23b5cf76dacc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../banco-web/apps/banco-web/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../banco-web/apps/banco-web/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../banco-web/apps/banco-web/src/loginPage/login-events.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../banco-web/apps/banco-web/src/loginPage/login-events.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqlRelation/DataBase/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sqlRelation/DataBase/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../banco-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../banco-web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../banco-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../banco-web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../banco-web/src/IndexBanco/banco.css" beforeDir="false" afterPath="$PROJECT_DIR$/../banco-web/src/IndexBanco/banco.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../banco-web/src/IndexBanco/banco.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../banco-web/src/IndexBanco/banco.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../banco-web/src/IndexBanco/usuario.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../banco-web/src/IndexBanco/usuario.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../banco-web/src/IndexBanco/usuario.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../banco-web/src/login/login-events.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../banco-web/src/login/login-events.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +46,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/gustavorocha/Desktop/SistemasCorporativos/Api&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/gustavorocha/Desktop/TesteApi/API&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -63,9 +71,6 @@
       <module name="Api" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="routes.app" value="" />
-      </envs>
       <option name="SDK_HOME" value="/usr/bin/python3.10" />
       <option name="SDK_NAME" value="Python 3.10" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -103,6 +108,13 @@
       <workItem from="1673103686616" duration="7852000" />
       <workItem from="1673144774429" duration="8298000" />
       <workItem from="1673251762123" duration="4000" />
+      <workItem from="1675039551095" duration="62000" />
+      <workItem from="1675039788483" duration="1574000" />
+      <workItem from="1675071832983" duration="3631000" />
+      <workItem from="1675086997587" duration="6327000" />
+      <workItem from="1675153471321" duration="1430000" />
+      <workItem from="1675241713242" duration="763000" />
+      <workItem from="1675271754847" duration="2228000" />
     </task>
     <servers />
   </component>
@@ -121,6 +133,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Api$loadFastAPi.coverage" NAME="loadFastAPi Coverage Results" MODIFIED="1673144831544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Api$loadFastAPi.coverage" NAME="loadFastAPi Coverage Results" MODIFIED="1675273487462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

@@ -1,6 +1,5 @@
 from sqlalchemy import Column, Integer, CHAR,String, Enum, DDL, event, FLOAT, VARCHAR, TIMESTAMP, ForeignKey
 from sqlalchemy.orm import relationship
-import pymysql.cursors
 from ..db import Base, conn
 
 

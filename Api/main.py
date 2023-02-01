@@ -1,16 +1,30 @@
-import errno
 
 from fastapi import Depends, FastAPI, HTTPException, requests, APIRouter
 from fastapi.encoders import jsonable_encoder
 from sqlalchemy.orm import Session
-from .sqlRelation.db import engine, SessionLocal, conn,get_db,conx, cursor
-from .sqlRelation.DataBase import models, schemas
-from .sqlRelation.Routes import CRUD
+from sqlRelation.db import engine, SessionLocal, conn,get_db,conx, cursor
+from sqlRelation.DataBase import models, schemas
+from sqlRelation.Routes import CRUD
+from fastapi.middleware.cors import CORSMiddleware
 models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
+
+origins = [
+    "http://localhost:3000"
+]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials= True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 appRouter = APIRouter
 
 database = models.Correntista()
+@app.get("/teste")
+def retorno():
+    return {"servidor":"API FUNCIONA"}
 @app.get("/")
 async def serveLoad():
         return HTTPException(status_code=200, detail="Servidor On",headers=None)

@@ -1,3 +1,7 @@
-.bancouser table, thead, td{
+.bancouser{
     color: #FFFFFF;
 }
+.tabelausuario{
+    color: rgba(0, 0, 0, 0.75);
+}
+
